@@ -11,12 +11,10 @@ export class EmployeeService {
   //options: any;
   constructor(private http: Http) { }
 
-  getEmployee() {
- 
-    var params= {
-      'actionMethod':'CheckLogin',
-      'staffCode':'15989',
-      'psassword':'lalala'
+ getEmployee() {
+   
+    const params = {
+      'url' : 'http://api.github.com/search/users?q=tom'
     }
 
     let httpPostOptions =

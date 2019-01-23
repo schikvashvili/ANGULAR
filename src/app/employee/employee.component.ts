@@ -10,13 +10,13 @@ export class EmployeeComponent implements OnInit {
 
   constructor(private service: EmployeeService) { }
 
-  textToShow: String;
+  textToShow: any;
   ngOnInit() {
     
   }
 
 onClickMe(){
-  this.service.getEmployee().subscribe(d => {
+  this.service.getEmployee().subscribe((d: any) => {
     this.textToShow = d.json();
   });
 }
